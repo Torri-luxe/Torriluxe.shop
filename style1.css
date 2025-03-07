@@ -101,7 +101,8 @@ header {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Tarjetas más grandes */
     gap: 20px;
     justify-content: center;
 }
@@ -121,7 +122,8 @@ header {
 
 .product-image {
     width: 100%;
-    height: 250px;
+    height: 300px;
+    /* Imágenes más grandes */
     overflow: hidden;
 }
 
@@ -227,68 +229,58 @@ footer p {
     }
 
     .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* Dos tarjetas por fila */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         padding: 20px 5%;
     }
 
     .product-image {
-        height: 200px;
-        /* Aumentar la altura de la imagen */
+        height: 250px;
+        /* Imágenes más grandes en móviles */
     }
 
     .product-info h3 {
         font-size: 20px;
-        /* Aumentar el tamaño del título */
     }
 
     .product-info p {
         font-size: 14px;
-        /* Aumentar el tamaño de la descripción */
     }
 
     .product-info .price {
         font-size: 18px;
-        /* Aumentar el tamaño del precio */
     }
 
     .whatsapp-button {
         padding: 10px 20px;
-        /* Aumentar el tamaño del botón */
         font-size: 16px;
     }
 }
 
 @media (max-width: 480px) {
     .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* Dos tarjetas por fila */
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         padding: 20px 10px;
     }
 
     .product-image {
-        height: 180px;
-        /* Aumentar la altura de la imagen */
+        height: 220px;
+        /* Imágenes más grandes en móviles pequeños */
     }
 
     .product-info h3 {
         font-size: 18px;
-        /* Aumentar el tamaño del título */
     }
 
     .product-info p {
         font-size: 13px;
-        /* Aumentar el tamaño de la descripción */
     }
 
     .product-info .price {
         font-size: 16px;
-        /* Aumentar el tamaño del precio */
     }
 
     .whatsapp-button {
         padding: 8px 16px;
-        /* Aumentar el tamaño del botón */
         font-size: 14px;
     }
 }

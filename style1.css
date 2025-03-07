@@ -28,7 +28,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .logo-container {
@@ -40,17 +39,11 @@ header {
     margin: 0;
     font-size: 28px;
     color: #d4af37;
-    transition: color 0.3s ease;
 }
 
 .logo {
     width: 50px;
     margin-left: 10px;
-    transition: transform 0.3s ease;
-}
-
-.logo:hover {
-    transform: scale(1.1);
 }
 
 /* Menú Flexbox */
@@ -67,7 +60,7 @@ header {
     text-decoration: none;
     color: #333;
     font-weight: 500;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
+    transition: color 0.3s;
     padding: 10px 15px;
     letter-spacing: 1px;
     border-bottom: 2px solid transparent;
@@ -86,11 +79,6 @@ header {
     font-size: 24px;
     cursor: pointer;
     color: #d4af37;
-    transition: color 0.3s ease;
-}
-
-.menu-toggle:hover {
-    color: #b8860b;
 }
 
 /* Sección de Productos */
@@ -103,14 +91,12 @@ header {
     font-size: 36px;
     color: #d4af37;
     margin-bottom: 20px;
-    transition: color 0.3s ease;
 }
 
 .products p {
     font-size: 18px;
     color: #555;
     margin-bottom: 30px;
-    transition: color 0.3s ease;
 }
 
 .product-grid {
@@ -125,7 +111,7 @@ header {
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
 }
@@ -139,7 +125,6 @@ header {
     width: 100%;
     height: 300px;
     overflow: hidden;
-    transition: transform 0.3s ease;
 }
 
 .product-image img {
@@ -163,14 +148,12 @@ header {
     font-size: 24px;
     color: #d4af37;
     margin-bottom: 10px;
-    transition: color 0.3s ease;
 }
 
 .product-info p {
     font-size: 16px;
     color: #666;
     margin-bottom: 10px;
-    transition: color 0.3s ease;
 }
 
 .product-info .price {
@@ -178,7 +161,6 @@ header {
     color: #d4af37;
     font-weight: bold;
     margin-bottom: 15px;
-    transition: color 0.3s ease;
 }
 
 .whatsapp-button {
@@ -188,7 +170,7 @@ header {
     border-radius: 5px;
     text-decoration: none;
     font-size: 16px;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: background 0.3s;
     border: none;
     cursor: pointer;
     width: 100%;
@@ -197,7 +179,6 @@ header {
 
 .whatsapp-button:hover {
     background: #128c7e;
-    transform: scale(1.05);
 }
 
 /* Footer */
@@ -207,7 +188,6 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 60px;
-    transition: background-color 0.3s ease;
 }
 
 .social-media {
@@ -220,18 +200,16 @@ footer {
 .social-media a {
     color: #fff;
     font-size: 24px;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s;
 }
 
 .social-media a:hover {
     color: #d4af37;
-    transform: scale(1.1);
 }
 
 footer p {
     margin: 0;
     font-size: 14px;
-    transition: color 0.3s ease;
 }
 
 /* Responsive Design */
@@ -256,7 +234,10 @@ footer p {
     }
 
     .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        grid-template-columns: repeat(2, 1fr);
+        /* Dos columnas en móviles */
+        gap: 15px;
+        /* Espacio entre tarjetas */
         padding: 20px 5%;
     }
 
@@ -265,11 +246,13 @@ footer p {
     }
 
     .product-image {
-        height: 250px;
+        height: 200px;
+        /* Imágenes más grandes */
     }
 
     .product-info h3 {
         font-size: 20px;
+        /* Texto más grande */
     }
 
     .product-info p {
@@ -288,7 +271,10 @@ footer p {
 
 @media (max-width: 480px) {
     .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        grid-template-columns: repeat(2, 1fr);
+        /* Dos columnas en móviles pequeños */
+        gap: 10px;
+        /* Espacio entre tarjetas */
         padding: 20px 10px;
     }
 
@@ -297,11 +283,13 @@ footer p {
     }
 
     .product-image {
-        height: 220px;
+        height: 180px;
+        /* Imágenes más grandes */
     }
 
     .product-info h3 {
         font-size: 18px;
+        /* Texto más grande */
     }
 
     .product-info p {
